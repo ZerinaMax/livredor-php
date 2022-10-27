@@ -1,7 +1,7 @@
 <?php
     class DatabaseHandler {
         const DBURL = 'localhost';
-        const DBNAME = 'livredor';
+        const DBNAME = 'guestbook';
 
         private $username = 'dev';
         private $password = '123';
