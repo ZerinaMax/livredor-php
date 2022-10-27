@@ -18,16 +18,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `livredor`
+-- Base de données : `guestbook`
 --
+DROP DATABASE IF EXISTS `guestbook`;
+CREATE DATABASE IF NOT EXISTS `guestbook` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `guestbook`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `livredor`
+-- Structure de la table `guestbook`
 --
 
-CREATE TABLE `livredor` (
+CREATE TABLE `comments` (
   `message_id` bigint(7) UNSIGNED NOT NULL,
   `txt_message` varchar(400) NOT NULL,
   `txt_email` varchar(25) NOT NULL,
@@ -38,17 +41,17 @@ CREATE TABLE `livredor` (
 -- Déchargement des données de la table `citation`
 --
 
-INSERT INTO `livredor` (`message_id`, `txt_message`, `txt_email`, `date`) VALUES
-(1, 'Tres bien.', 'zed@zed.fr', '2022-10-24');
+INSERT INTO `comments` (`message_id`, `txt_message`, `txt_email`, `date`) VALUES
+(1, "Formation complète, formateur compétent et à l'écoute, dommage que le temps imparti pour assimiler et tester toutes ces nouvelles technologies soit si court.", 'zerina.maxhuni@gmail.com', '2022-10-27 14:05:30');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `livredor`
+-- Index pour la table `comments`
 --
-ALTER TABLE `livredor`
+ALTER TABLE `comments`
   ADD PRIMARY KEY (`message_id`);
 
 --
@@ -56,9 +59,8 @@ ALTER TABLE `livredor`
 --
 
 --
--- AUTO_INCREMENT pour la table `citation`
 --
-ALTER TABLE `livredor`
+ALTER TABLE `comments`
   MODIFY `message_id` bigint(7) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 

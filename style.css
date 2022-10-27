@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    width:20%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+legend {
+    padding-bottom: 10px;
+}
+
+button {
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    background-color: bisque;
+}
+
+button:hover {
+    background-color:indianred;
+}
+
+table {
+    margin: auto;
+    width: 1000px;
+    padding: 3px;
+}
+
+th, td {
+    border: solid 1px black;
+    padding: 3px;
+    text-align: center;
+}
