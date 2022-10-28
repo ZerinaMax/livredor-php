@@ -56,7 +56,7 @@ $comment = new Message($database->connectToDatabase());
     if (isset($_POST['sub']) && isset($_POST['txt_email']) && isset($_POST['txt_message'])){
             $email = htmlspecialchars(strip_tags($_POST['txt_email']));
             $message = htmlspecialchars(strip_tags($_POST['txt_message']));
-            if (isset($email) && isset($message)) {
+            if (!empty($email) && !empty($message)) {
                 $comment->createMessage($email, $message);
                 header('Location: http://127.0.0.1/guestbook-php/');
         };
